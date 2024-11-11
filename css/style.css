@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* DIVICION DE TRES PARTES */
+body {
+    background-color: #070707;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 142px;
+}
+
+.left-sidebar, .main-content, .right-sidebar {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.left-sidebar {
+    width: 25%; /* Ajusta el ancho según tus preferencias */
+    background-color: #ff00aa;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+/* SE PUEDEN HACER TRANSPARENTES USANDO EL "transparent" */
+.right-sidebar {
+    width: 30%; /* Ajusta el ancho según tus preferencias */
+    background-color: transparent;
+    margin-top: 20px; /* Ajusta según sea necesario para agregar espacio entre main-content y right-sidebar */
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: transparent;
+    margin-top: 20px; /* Ajusta según sea necesario para agregar espacio entre left-sidebar y main-content */
+}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 769px) {
+    .main-content {
+        margin-left: 8%; /* Ajusta según sea necesario para agregar espacio a la izquierda de main-content en pantallas grandes */
+        margin-right: 1%;
+    }
+}
+
+/* Modificar el diseño para pantallas más pequeñas si es necesario */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right-sidebar {
+        margin-top: 0;
+    }
+}
+
+/* DIVICION DE TRES PARTES */
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #700063;
+    border-radius: 50px;
+}
+
+header {
+    height: 10%;
+    padding: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 0, 0);
+    background-color: transparent;  /* Color del header (fondo) */
+}
+
+section {
+    width: 100%;
+    height: 80%;
+}
+
+article {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    float: auto;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    color: rgb(255, 0, 0);
+}
